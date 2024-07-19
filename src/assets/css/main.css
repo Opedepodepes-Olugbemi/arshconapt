@@ -1,0 +1,50 @@
+.fade-in-down {
+  animation: 1s ease-in-out fade-in-down;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    opacity: 0;
+    transform: translateY(-20px)
+    }
+  .fade-in-down.show {
+    opacity: 1;
+    transform: translateY(0)
+        }
+      @keyframes fade-in-down {
+        0% {
+        opacity: 0;
+        transform: translateY(-20px)
+        }
+      100% {
+      opacity: 1;
+      transform: translateY(0)
+      }
+    }
+  @property --num-transactions {
+    syntax: "<integer>";
+    inherits: false;
+    initial-value: 0
+    }
+  @property --num-assets {
+    syntax: "<integer>";
+    inherits: false;
+    initial-value: 0
+    }
+  @property --num-users {
+    syntax: "<integer>";
+    inherits: false;
+    initial-value: 0
+    }
+  @keyframes counter {
+    0% {
+    --num-transactions: 0;
+    --num-assets: 0;
+    --num-users: 0
+    }
+  100% {
+  --num-transactions: 95;
+  --num-assets: 500;
+  --num-users: 85
+  }
+}
+

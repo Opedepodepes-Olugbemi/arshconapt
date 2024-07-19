@@ -1,0 +1,83 @@
+.fade-in-down {
+  animation: 1s ease-in-out fade-in-down;
+  animation-timeline: auto;
+  animation-range-start: normal;
+  animation-range-end: normal;
+  opacity: 0;
+  transform: translateY(-20px)
+  }
+.fade-in-down.show {
+  opacity: 1;
+  transform: translateY(0)
+  }
+.typewriter {
+  display: inline-block;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-right: .075em solid currentcolor;
+    animation: 4s steps(40) forwards typewriter;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal
+    }
+  .animate-blink {
+    animation: 2s infinite blink;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal
+    }
+  @keyframes fade-in-down {
+    0% {
+    opacity: 0;
+    transform: translateY(-5px)
+    }
+  100% {
+  opacity: 1;
+  transform: translateY(0)
+  }
+}
+@property --num-transactions {
+  syntax: "<integer>";
+  inherits: false;
+  initial-value: 0
+  }
+@property --num-assets {
+  syntax: "<integer>";
+  inherits: false;
+  initial-value: 0
+  }
+@property --num-users {
+  syntax: "<integer>";
+  inherits: false;
+  initial-value: 0
+  }
+@keyframes counter {
+  0% {
+  --num-transactions: 0;
+  --num-assets: 0;
+  --num-users: 0
+  }
+100% {
+--num-transactions: 95;
+--num-assets: 500;
+--num-users: 85
+}
+}
+@keyframes typewriter {
+  0% {
+  width: 0
+  }
+100% {
+width: 100%
+}
+}
+@keyframes blink {
+  0%,
+  50% {
+  opacity: 1
+  }
+100% {
+opacity: 0
+}
+}
+
